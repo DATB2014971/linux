@@ -923,8 +923,8 @@ static int e1000_probe(struct pci_dev *pdev, const struct pci_device_id *ent)
 	struct net_device *netdev;
 	struct e1000_adapter *adapter = NULL;
 	struct e1000_hw *hw;
-
-	static int cards_found;
+	printk(KERN_DEBUG "I can modify the Linux kernel!\n");
+	static int cards_found = 0;
 	static int global_quad_port_a; /* global ksp3 port a indication */
 	int i, err, pci_using_dac;
 	u16 eeprom_data = 0;
